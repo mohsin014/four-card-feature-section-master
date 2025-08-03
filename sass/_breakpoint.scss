@@ -1,0 +1,15 @@
+
+$sm: 376px;
+$md: 768px;
+$lg: 1440px;
+
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: $md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: $lg) { @content; }
+  }
+}

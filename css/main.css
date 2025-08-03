@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card-title {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+}
+.card-title h1 {
+  font-family: "Poppins", sans-serif;
+  color: hsl(212, 6%, 44%);
+}
+.card-title h1 span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 0%);
+}
+.card-title p {
+  font-size: 15px;
+  color: hsl(234, 12%, 34%);
+  margin-top: 0.5rem;
+}
+@media (max-width: 376px) {
+  .card-title {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 1 rem;
+  }
+  .card-title h1 {
+    font-size: 1.6rem;
+  }
+  .card-title p {
+    font-size: 1rem;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.card {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: ".       card-2 ." ".       card-3 .";
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+@media (max-width: 376px) {
+  .card {
+    display: block;
+  }
+}
+
+.card-1, .card-2, .card-3, .card-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.7rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  width: 20rem;
+  height: 15rem;
+}
+.card-1 h2 p, .card-2 h2 p, .card-3 h2 p, .card-4 h2 p {
+  text-align: right;
+  align-self: flex-end;
+}
+.card-1 img, .card-2 img, .card-3 img, .card-4 img {
+  align-self: flex-end;
+  margin-top: 1rem;
+  align-content: center;
+}
+
+.card-1 {
+  border-top: 4px solid hsl(0, 78%, 62%);
+  grid-column: 1;
+  grid-row: 1/span 2;
+  align-self: center;
+}
+
+.card-2 {
+  border-top: 4px solid hsl(180, 62%, 55%);
+  grid-area: card-2;
+}
+
+.card-3 {
+  border-top: 4px solid hsl(34, 97%, 64%);
+  grid-area: card-3;
+}
+
+.card-4 {
+  border-top: 4px solid hsl(212, 86%, 64%);
+  grid-column: 3;
+  grid-row: 1/span 2;
+  align-self: center;
+}
+
+/*# sourceMappingURL=main.css.map */
